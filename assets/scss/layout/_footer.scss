@@ -1,0 +1,151 @@
+footer {
+    background: var(--sub-color);
+    .inner {
+        padding: 100px 100px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        @include desktop {
+            padding: 50px;
+        }
+
+        @include mobile {
+            padding: 10px;
+            gap: 0;
+        }
+        .top {
+            display: flex;
+            gap: 100px;
+            @include desktop {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .footer-logo {
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+
+                @include desktop {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .logo {
+                    filter: invert(1);
+                    @include desktop {
+                        flex: 0.4;
+                    }
+                    @include mobile {
+                        flex: 1;
+                    }
+                }
+
+                .icon {
+                    @include mobile {
+                        display: none;
+                    }
+                }
+            }
+            .footer-wrap {
+                display: flex;
+                flex: 1;
+                @include mobile {
+                    flex-direction: column;
+                }
+                .footer-menu {
+                    flex: 1;
+
+                    &:last-child {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                    }
+                    .title {
+                        color: #fff;
+                        opacity: 0.4;
+                        font-size: 30px;
+                        font-family: var(--sub2-font);
+                    }
+
+                    .footer-list {
+                        padding-top: 10px;
+                    }
+                    .footer-item {
+                        .link-footer {
+                            font-size: 16px;
+                            display: block;
+                            padding: 10px 0px;
+                            color: #fff;
+                            font-family: var(--sub-font);
+                        }
+                    }
+                    .sns-icon,
+                    .laguage-icon {
+                        display: flex;
+                        padding-top: 20px;
+                        gap: 20px;
+
+                        .link-sns,
+                        .link-laguage {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .img-wrap {
+                                width: 100%;
+                                height: 100%;
+                                filter: brightness(100);
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+
+                            span {
+                                color: #fff;
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bottom {
+            border-top: 1px solid #fff3;
+            .footer-list {
+                display: flex;
+                gap: 50px;
+                @include desktop {
+                    gap: 20px;
+                    justify-content: space-between;
+                }
+
+                @include tablet {
+                    flex-direction: column;
+                    padding-top: 20px;
+                    gap: 0;
+                }
+            }
+            .footer-item {
+                @include tablet {
+                    display: flex;
+                    justify-content: left;
+                }
+                .link-footer {
+                    height: 100px;
+                    display: flex;
+                    font-family: var(--sub-font);
+                    color: #fff;
+                    opacity: 0.4;
+                    align-items: center;
+                    justify-content: center;
+                    @include tablet {
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

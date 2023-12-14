@@ -1,0 +1,93 @@
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+body {
+    text-transform: uppercase;
+    background-color: var(--main-color);
+}
+:root {
+    --main-color: rgb(244, 241, 234);
+    --sub2-color: rgb(251, 251, 248);
+    --sub-color: rgb(195, 49, 48);
+    --font-color: rgb(51, 51, 51);
+    --title-font: "Krisha", sans-serif;
+    --sub-font: "Barlow", sans-serif;
+    --sub2-font: "Teko", sans-serif;
+}
+
+.text-module {
+    overflow: hidden;
+    span {
+        display: inline-block;
+        transform: translateY(100%);
+    }
+}
+.title {
+    font-family: var(--title-font);
+}
+
+@keyframes movetext {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes movetext2 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+// link-
+
+.btn-menu {
+    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .link-menu {
+        padding: 15px 70px 15px 20px;
+        position: relative;
+        color: var(--main-color);
+        font-size: 20px;
+        background-color: var(--sub-color);
+        border-radius: 0.5em;
+        transition: 0.5s;
+
+        &:hover {
+            transition: 0.5s;
+            filter: drop-shadow(2px 4px 6px black);
+
+            &::after {
+                transition: 0.5s;
+                right: 8px;
+            }
+        }
+        &::after {
+            transition: 0.5s;
+            width: 40px;
+            height: 20px;
+            -webkit-filter: brightness(100) grayscale(1);
+            filter: brightness(100) grayscale(1);
+            content: "";
+            right: 15px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(../images/content/menu-arrow.svg);
+        }
+    }
+}

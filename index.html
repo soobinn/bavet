@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bavet.eu</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- swiper -->
+        <script src="https://unpkg.com/gsap@3.9.1/dist/CustomEase.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="./assets/js/spliteType.min.js"></script>
+
+        <script src="./assets/js/main.js" defer></script>
+        <script src="./assets/js/swiper.js" defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item menu">
+                            <a href="">our menu</a>
+                        </li>
+                        <li class="nav-item menu">
+                            <a href=""> Restaurants </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href=""
+                                ><h1 class="logo">
+                                    <svg
+                                        viewBox="0 0 83 28"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="w-full px-2"
+                                    >
+                                        <g clip-path="url(#clip0_631_15410)">
+                                            <path
+                                                d="M8.6342 0.706055H0.621094V27.3327H8.6342C10.8823 27.3327 13.521 25.8872 13.521 24.1371V19.6122C13.521 16.1883 12.3007 15.0076 10.0025 14.0202C12.2991 13.0312 13.521 11.8516 13.521 8.42818V3.90165C13.5218 2.1515 10.8832 0.706055 8.6342 0.706055ZM6.82698 24.1391H5.59939V15.6182H6.77898C6.77898 15.6182 8.47394 16.6072 8.47394 19.8784C8.47394 23.1497 6.82698 24.1391 6.82698 24.1391ZM6.77817 12.4226H5.59857V3.90165H6.82617C6.82617 3.90165 8.4715 4.89064 8.4715 8.16191C8.4715 11.4332 6.77817 12.4226 6.77817 12.4226Z"
+                                                fill="currentColor"
+                                            ></path>
+                                            <path
+                                                d="M18.8721 0.666992C18.188 4.01474 17.2109 27.3337 17.2109 27.3337H23.0276L22.8291 15.6171H25.0341L24.834 27.3337H30.6506C30.6506 27.3337 29.6744 4.01474 28.9422 0.666992H18.8721ZM22.8274 12.4215C22.8762 9.03616 23.2216 6.25898 23.4656 3.86259H24.3939C24.5895 6.25938 24.9832 9.03616 24.9832 12.4215H22.8274Z"
+                                                fill="currentColor"
+                                            ></path>
+                                            <path
+                                                d="M42.1561 13.9821C42.1561 18.1287 41.2807 21.3619 41.0363 24.1391H40.9586C40.7145 21.3619 39.8388 18.1287 39.8388 13.9821L39.1689 0.706055H33.4141L36.6681 27.3327H45.2796L48.5832 0.706055H42.8264L42.1561 13.9821Z"
+                                                fill="currentColor"
+                                            ></path>
+                                            <path
+                                                d="M52.4922 27.3347H61.0926V24.1395H58.3072V15.6438H60.1783V12.4486H58.3072V3.90165H61.0926V0.706055H52.4922V27.3347Z"
+                                                fill="currentColor"
+                                            ></path>
+                                            <path
+                                                d="M64.375 3.90165H66.9648V27.3347H72.7814V3.90165H75.4201V0.706055H64.375V3.90165Z"
+                                                fill="currentColor"
+                                            ></path>
+                                            <path
+                                                d="M80.0315 0.668271C79.7232 0.658446 79.4161 0.710259 79.1287 0.82058C78.8413 0.9309 78.5796 1.09744 78.3594 1.31013C78.1392 1.52281 77.9652 1.77724 77.8477 2.05802C77.7302 2.3388 77.6718 2.64012 77.676 2.94375C77.69 3.54878 77.944 4.12439 78.3836 4.54743C78.8233 4.97046 79.4137 5.20732 80.0285 5.20732C80.6433 5.20732 81.2336 4.97046 81.6733 4.54743C82.1129 4.12439 82.367 3.54878 82.381 2.94375C82.3864 2.64029 82.329 2.33893 82.2124 2.05798C82.0957 1.77704 81.9222 1.52239 81.7025 1.30953C81.4827 1.09668 81.2212 0.930058 80.934 0.819816C80.6467 0.709574 80.3397 0.658013 80.0315 0.668271ZM80.0315 4.73874C79.7911 4.74464 79.5519 4.70215 79.3287 4.61389C79.1055 4.52563 78.903 4.39345 78.7335 4.22545C78.564 4.05744 78.4311 3.85714 78.343 3.63683C78.2549 3.41651 78.2134 3.1808 78.2211 2.94415C78.2211 2.47308 78.4112 2.0213 78.7495 1.6882C79.0879 1.3551 79.5469 1.16797 80.0254 1.16797C80.504 1.16797 80.9629 1.3551 81.3013 1.6882C81.6397 2.0213 81.8298 2.47308 81.8298 2.94415C81.8389 3.18014 81.7987 3.41546 81.7119 3.63561C81.6251 3.85576 81.4933 4.05608 81.3249 4.22421C81.1564 4.39234 80.9547 4.52473 80.7323 4.61322C80.5099 4.70171 80.2714 4.74443 80.0315 4.73874Z"
+                                                fill="currentColor"
+                                            ></path>
+                                            <path
+                                                d="M80.9777 2.48582C80.9777 2.07541 80.6792 1.84277 80.0979 1.84277H79.2344V3.874H79.7745V3.13447H80.0011L80.4127 3.874H81.0558L80.5453 3.04918C80.6705 3.01542 80.7807 2.94186 80.8589 2.83995C80.9372 2.73805 80.9789 2.61353 80.9777 2.48582ZM80.0979 2.73927H79.7725V2.26319H80.1121C80.2923 2.26319 80.4107 2.34928 80.4107 2.49623C80.4119 2.6684 80.2834 2.73927 80.0979 2.73927Z"
+                                                fill="currentColor"
+                                            ></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_631_15410">
+                                                <rect
+                                                    width="81.7581"
+                                                    height="26.6667"
+                                                    fill="currentColor"
+                                                    transform="translate(0.621094 0.666992)"
+                                                ></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg></h1
+                            ></a>
+                        </li>
+                        <li class="nav-item menu">
+                            <a href=""> Community </a>
+                        </li>
+                        <li class="nav-item menu">
+                            <a href=""> Jobs </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="sub-menu">
+                <nav class="sub-nav">
+                    <ul class="sub-list">
+                        <li class="sub-item">
+                            <a href="" class="link-sub">Our menu</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="" class="link-sub">Book a table</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="" class="link-sub">Order food</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <main class="container">
+                <section class="sc-main">
+                    <div class="move-text">
+                        <div class="text-box">
+                            <ul class="text-list">
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                            </ul>
+                            <ul class="text-list">
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                            </ul>
+                        </div>
+                        <div class="text-box">
+                            <ul class="text-list">
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                            </ul>
+                            <ul class="text-list">
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                            </ul>
+                        </div>
+                        <div class="text-box">
+                            <ul class="text-list">
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                            </ul>
+                            <ul class="text-list">
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                                <li class="text-item">Made for friends</li>
+                                <li class="text-item">Bavet</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <picture class="img-box">
+                        <img src="./assets/images/content/main.jpeg" alt="" />
+                    </picture>
+                </section>
+
+                <section class="sc-moreMenu">
+                    <div class="text-group text-module-wrap">
+                        <div class="text-box">
+                            <div class="text-top">
+                                <p class="top-text text-module">
+                                    <span>If there’s anything that</span>
+                                </p>
+                                <p class="top-text text-module">
+                                    <span>unites people it’s a saucy</span>
+                                </p>
+                                <p class="top-text text-module">
+                                    <span>bowl of spaghetti.</span>
+                                </p>
+                            </div>
+                            <div class="text-bottom">
+                                <p class="bottom-text">
+                                    BAVET means more than ‘just spaghetti’,
+                                    though. It’s about making friends on both
+                                    sides of the table. It’s a feeling, an
+                                    experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more-grid">
+                        <div class="text-more">
+                            <div class="text-box">
+                                <h3 class="title on" id="text1">
+                                    <span>Kenny's</span>
+                                    <span>revenge</span>
+                                </h3>
+                                <h3 class="title" id="text2">
+                                    <span>Baveat</span>
+                                    <span>combo</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="grid-group">
+                            <div class="img-box">
+                                <picture class="hover-img">
+                                    <img
+                                        src="./assets/images/content/hover.svg"
+                                        alt=""
+                                    />
+                                </picture>
+                                <picture class="img-con" data-text="#text1">
+                                    <img
+                                        src="./assets/images/content/menu1.png"
+                                        alt=""
+                                /></picture>
+                            </div>
+                            <div class="img-box">
+                                <picture class="img-con">
+                                    <img
+                                        src="./assets/images/content/menu2.png"
+                                        alt=""
+                                /></picture>
+                            </div>
+                            <div class="img-box">
+                                <picture class="img-con">
+                                    <img
+                                        src="./assets/images/content/menu3.png"
+                                        alt=""
+                                /></picture>
+                            </div>
+                            <div class="img-box" data-text="#text2">
+                                <picture class="hover-img">
+                                    <img
+                                        src="./assets/images/content/hover2.svg"
+                                        alt=""
+                                    />
+                                </picture>
+                                <picture class="img-con" data-text="#text2">
+                                    <img
+                                        src="./assets/images/content/menu4.png"
+                                        alt=""
+                                /></picture>
+                            </div>
+                            <div class="img-box">
+                                <picture class="img-con">
+                                    <img
+                                        src="./assets/images/content/menu5.png"
+                                        alt=""
+                                /></picture>
+                            </div>
+                            <div class="img-box">
+                                <picture class="img-con">
+                                    <img
+                                        src="./assets/images/content/menu6.png"
+                                        alt=""
+                                /></picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-menu">
+                        <a href="" class="link-menu"> See our full menu </a>
+                    </div>
+                </section>
+
+                <section class="sc-slide">
+                    <div class="text-box">
+                        <p class="desc">
+                            Bavet has grown into a collection of restaurants.
+                            We’re now talking 15 locations, each with its own
+                            distinctive atmosphere, muse, and experience.
+                        </p>
+
+                        <div class="btn-menu">
+                            <a href="" class="link-menu">
+                                See all restaurants
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper SLSwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <picture>
+                                    <img
+                                        src="./assets/images/content/slide1.jpeg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </li>
+                            <li class="swiper-slide">
+                                <picture>
+                                    <img
+                                        src="./assets/images/content/slide2.jpeg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </li>
+                            <li class="swiper-slide">
+                                <picture>
+                                    <img
+                                        src="./assets/images/content/slide3.jpeg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </li>
+                            <li class="swiper-slide">
+                                <picture>
+                                    <img
+                                        src="./assets/images/content/slide4.jpeg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </li>
+                            <li class="swiper-slide">
+                                <picture>
+                                    <img
+                                        src="./assets/images/content/slide5.jpeg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </li>
+                            <li class="swiper-slide">
+                                <picture>
+                                    <img
+                                        src="./assets/images/content/slide1.jpeg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="sc-record">
+                    <div class="text-group text-module-wrap">
+                        <div class="text-box">
+                            <div class="text-top">
+                                <p class="top-text text-module">
+                                    <span>Red plate? Free spaghetti</span>
+                                </p>
+
+                                <p class="top-text text-module">
+                                    <span>for you, my friend</span>
+                                </p>
+                            </div>
+                            <div class="text-bottom">
+                                <p class="bottom-text">
+                                    <del>Surprise (n.)</del> Excitement (n.)
+                                </p>
+
+                                <p class="bottom-text">
+                                    That feeling you get when your meal is on
+                                    the house because you pulled the red record
+                                    out of your menu. Lucky bastard!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="record-area">
+                        <div class="sticky-inner">
+                            <div class="content">
+                                <div class="text-wrap">
+                                    <div class="text-box">
+                                        <ul class="text-list">
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                        </ul>
+                                        <ul class="text-list">
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-box">
+                                        <ul class="text-list">
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                        </ul>
+                                        <ul class="text-list">
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-box">
+                                        <ul class="text-list">
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                        </ul>
+                                        <ul class="text-list">
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                            <li class="text-item">lorem</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="side-group">
+                                    <div class="side-img">
+                                        <picture
+                                            ><img
+                                                src="./assets/images/content/record-img1.png"
+                                                alt=""
+                                        /></picture>
+                                    </div>
+
+                                    <div class="side-img">
+                                        <picture
+                                            ><img
+                                                src="./assets/images/content/record-img2.png"
+                                                alt=""
+                                        /></picture>
+                                    </div>
+                                </div>
+
+                                <div class="center-group">
+                                    <div class="img-box">
+                                        <div class="record-bg"></div>
+                                        <picture class="img-wrap"
+                                            ><img
+                                                src="./assets/images/content/record.png"
+                                                alt=""
+                                        /></picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="round">
+                    <section class="sc-take">
+                        <div class="inner">
+                            <div class="img-box">
+                                <picture class="round-text"
+                                    ><img
+                                        src="./assets/images/content/takeout-text.svg"
+                                        alt=""
+                                /></picture>
+                                <picture class="round-img"
+                                    ><img
+                                        src="./assets/images/content/takeout.jpeg"
+                                        alt=""
+                                /></picture>
+                            </div>
+                            <div class="link-box">
+                                <a href="" class="link-deliver">
+                                    <picture
+                                        ><img
+                                            src="./assets/images/content/record-icon1.svg"
+                                            alt=""
+                                    /></picture>
+                                </a>
+                                <a href="" class="link-uber"
+                                    ><picture
+                                        ><img
+                                            src="./assets/images/content/record-icon2.svg"
+                                            alt="" /></picture
+                                ></a>
+                                <a href="" class="link-home"
+                                    ><picture
+                                        ><img
+                                            src="./assets/images/content/record-icon3.svg"
+                                            alt="" /></picture
+                                ></a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="sc-join">
+                        <div class="img-box text-module-wrap">
+                            <div class="back-text">
+                                <div class="text-module"><span>JOIN</span></div>
+                                <div class="text-module">
+                                    <span>SAUCIAL</span>
+                                </div>
+                            </div>
+                            <picture class="join-phone">
+                                <img
+                                    src="/assets/images/content/join-phone.png"
+                                    alt=""
+                                />
+                            </picture>
+                        </div>
+                        <div class="text-box text-module-wrap">
+                            <div class="inner">
+                                <h2 class="title">
+                                    <div class="text-module">
+                                        <span>JOIN THE</span>
+                                    </div>
+                                    <div class="text-module">
+                                        <span>SAUCIAL CLUB</span>
+                                    </div>
+                                </h2>
+                                <p class="desc">
+                                    Addicted to our red sauce glory? They’ll try
+                                    to make you go to rehab but you should say
+                                    ‘no no no’. Just download our app and join
+                                    the BAVET community instead. Free food
+                                    ahead!
+                                </p>
+                                <div class="join-qr">
+                                    <picture class="qr-img">
+                                        <img
+                                            src="./assets/images/content/join-qr.png"
+                                            alt=""
+                                        />
+                                    </picture>
+                                    <picture class="qr-img">
+                                        <img
+                                            src="./assets/images/content/join-arrow.svg"
+                                            alt=""
+                                        />
+                                    </picture>
+                                </div>
+                                <div class="btn-menu">
+                                    <a href="" class="link-menu"
+                                        >Explore our saucial club</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="sc-ordinary">
+                    <p class="desc">
+                        We're out of the ordinary, and proud of it. If it seems
+                        nuts or a bit crazy ‘for a food brand’, we’re probably
+                        doing it.
+                    </p>
+
+                    <div class="link-more">
+                        <ul class="ordinary-list">
+                            <li class="ordinary-item">
+                                <a href="" class="link-ordinary">
+                                    <picture class="img-wrap">
+                                        <img
+                                            src="./assets/images/content/ordinary1.svg"
+                                            alt=""
+                                        />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="ordinary-item">
+                                <a href="" class="link-ordinary">
+                                    <picture class="img-wrap">
+                                        <img
+                                            src="./assets/images/content/ordinary2.svg"
+                                            alt=""
+                                        />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="ordinary-item">
+                                <a href="" class="link-ordinary">
+                                    <picture class="img-wrap">
+                                        <img
+                                            src="./assets/images/content/ordinary3.svg"
+                                            alt=""
+                                        />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="ordinary-item">
+                                <a href="" class="link-ordinary">
+                                    <picture class="img-wrap">
+                                        <img
+                                            src="./assets/images/content/ordinary4.svg"
+                                            alt=""
+                                        />
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="sc-become text-module-wrap">
+                    <div class="inner">
+                        <div class="text-group">
+                            <div class="icon">
+                                <picture class="img-wrap">
+                                    <img
+                                        src="./assets/images/content/become-icon.svg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </div>
+                            <div class="text-box">
+                                <div class="top">
+                                    <h2 class="title">
+                                        <div class="text-module">
+                                            <span> Become a </span>
+                                        </div>
+                                        <div class="text-module">
+                                            <span>baveteer</span>
+                                        </div>
+                                    </h2>
+                                </div>
+                                <div class="mid">
+                                    <p class="desc">
+                                        Do you live to (literally) see saucy
+                                        smiles on customers’ faces? Does
+                                        hospi-spaghetti seem like a mix made in
+                                        heaven for you?
+                                    </p>
+                                    <p class="desc bold">
+                                        Are you the Chandler to our Monica or
+                                        the Rachel to our Ross?
+                                    </p>
+                                    <p class="desc">
+                                        Then you might be the Inglorious
+                                        Baveteer we’re looking for to join our
+                                        team! Don’t hesitate, dude(tte), and
+                                        have a look at our job openings!
+                                    </p>
+                                </div>
+                                <div class="btn-menu">
+                                    <a href="" class="link-menu"
+                                        >Show some love and vacancies</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="img-group">
+                            <picture class="img-wrap">
+                                <img
+                                    src="./assets/images/content/become.jpg"
+                                    alt=""
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sc-eat">
+                    <div class="move-icon">
+                        <picture class="img-wrap">
+                            <img
+                                src="./assets/images/content/eat-icon.svg"
+                                alt=""
+                            />
+                        </picture>
+                    </div>
+                    <div class="head-line">
+                        <div class="img-box">
+                            <picture class="img-wrap">
+                                <img
+                                    src="./assets/images/content/eat.svg"
+                                    alt=""
+                                />
+                            </picture>
+                            <p class="desc">Because you are what you r-eat.</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="inner">
+                            <ul class="eat-list">
+                                <li class="eat-item">
+                                    <a href="" class="link-eat">
+                                        <picture class="img-wrap">
+                                            <img
+                                                src="./assets/images/content/eat1.jpeg"
+                                                alt=""
+                                            />
+                                        </picture>
+                                        <div class="text-inner">
+                                            <span class="time">
+                                                16.11.2023
+                                            </span>
+                                            <h3 class="title">
+                                                NEW WINTER SPECIALS, WHO DIS?
+                                            </h3>
+                                            <p class="desc">
+                                                Our new winter specials just
+                                                dropped!
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="eat-item">
+                                    <a href="" class="link-eat">
+                                        <picture class="img-wrap">
+                                            <img
+                                                src="./assets/images/content/eat2.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                        <div class="text-inner">
+                                            <span class="time">
+                                                16.11.2023
+                                            </span>
+                                            <h3 class="title">
+                                                BAVET MATCHMAKERS
+                                            </h3>
+                                            <p class="desc">
+                                                Introducing… ❤️‍🔥 BAVET
+                                                Matchmakers ❤️‍🔥 – the ultimate
+                                                dating experience!
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="eat-item">
+                                    <a href="" class="link-eat">
+                                        <picture class="img-wrap">
+                                            <img
+                                                src="./assets/images/content/eat3.jpeg"
+                                                alt=""
+                                            />
+                                        </picture>
+                                        <div class="text-inner">
+                                            <span class="time">
+                                                16.11.2023
+                                            </span>
+                                            <h3 class="title">
+                                                BAVET x Tout Bien
+                                            </h3>
+                                            <p class="desc">
+                                                Our new winter specials just
+                                                dropped!
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-menu">
+                            <a href="" class="link-menu"
+                                >Show some love and vacancies</a
+                            >
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sc-newsletter text-module-wrap">
+                    <div class="inner">
+                        <div class="text-group">
+                            <div class="text-box">
+                                <div class="top">
+                                    <h2 class="title">
+                                        <div class="text-module">
+                                            <span> NOT YOUR</span>
+                                        </div>
+                                        <div class="text-module">
+                                            <span>AVERAGE</span>
+                                        </div>
+                                        <div class="text-module">
+                                            <span>NEWSLETTER</span>
+                                        </div>
+                                    </h2>
+                                </div>
+                                <div class="mid">
+                                    <div class="emailPush">
+                                        <label
+                                            for="username"
+                                            class="input-email"
+                                            >이메일작성</label
+                                        >
+                                        <input
+                                            autocomplete="email"
+                                            aria-required="true"
+                                            aria-invalid="false"
+                                            placeholder="Email"
+                                            type="email"
+                                            name="email"
+                                        />
+                                    </div>
+                                    <p class="desc">
+                                        This site is protected by
+                                        <span>reCAPTCHA</span> and the Google
+                                        Privacy Policy and Terms of Service
+                                        apply. <span>Please click</span> here to
+                                        read our Privacy policy
+                                    </p>
+                                </div>
+                                <div class="btn-menu">
+                                    <a href="" class="link-menu">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="img-group">
+                            <picture class="img-wrap">
+                                <img
+                                    src="./assets/images/content/news.jpeg"
+                                    alt=""
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="inner">
+                    <div class="top">
+                        <div class="footer-logo">
+                            <div class="logo">
+                                <svg
+                                    viewBox="0 0 83 28"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-auto w-36 xl:w-44"
+                                >
+                                    <g clip-path="url(#clip0_631_15410)">
+                                        <path
+                                            d="M8.6342 0.706055H0.621094V27.3327H8.6342C10.8823 27.3327 13.521 25.8872 13.521 24.1371V19.6122C13.521 16.1883 12.3007 15.0076 10.0025 14.0202C12.2991 13.0312 13.521 11.8516 13.521 8.42818V3.90165C13.5218 2.1515 10.8832 0.706055 8.6342 0.706055ZM6.82698 24.1391H5.59939V15.6182H6.77898C6.77898 15.6182 8.47394 16.6072 8.47394 19.8784C8.47394 23.1497 6.82698 24.1391 6.82698 24.1391ZM6.77817 12.4226H5.59857V3.90165H6.82617C6.82617 3.90165 8.4715 4.89064 8.4715 8.16191C8.4715 11.4332 6.77817 12.4226 6.77817 12.4226Z"
+                                            fill="currentColor"
+                                        ></path>
+                                        <path
+                                            d="M18.8721 0.666992C18.188 4.01474 17.2109 27.3337 17.2109 27.3337H23.0276L22.8291 15.6171H25.0341L24.834 27.3337H30.6506C30.6506 27.3337 29.6744 4.01474 28.9422 0.666992H18.8721ZM22.8274 12.4215C22.8762 9.03616 23.2216 6.25898 23.4656 3.86259H24.3939C24.5895 6.25938 24.9832 9.03616 24.9832 12.4215H22.8274Z"
+                                            fill="currentColor"
+                                        ></path>
+                                        <path
+                                            d="M42.1561 13.9821C42.1561 18.1287 41.2807 21.3619 41.0363 24.1391H40.9586C40.7145 21.3619 39.8388 18.1287 39.8388 13.9821L39.1689 0.706055H33.4141L36.6681 27.3327H45.2796L48.5832 0.706055H42.8264L42.1561 13.9821Z"
+                                            fill="currentColor"
+                                        ></path>
+                                        <path
+                                            d="M52.4922 27.3347H61.0926V24.1395H58.3072V15.6438H60.1783V12.4486H58.3072V3.90165H61.0926V0.706055H52.4922V27.3347Z"
+                                            fill="currentColor"
+                                        ></path>
+                                        <path
+                                            d="M64.375 3.90165H66.9648V27.3347H72.7814V3.90165H75.4201V0.706055H64.375V3.90165Z"
+                                            fill="currentColor"
+                                        ></path>
+                                        <path
+                                            d="M80.0315 0.668271C79.7232 0.658446 79.4161 0.710259 79.1287 0.82058C78.8413 0.9309 78.5796 1.09744 78.3594 1.31013C78.1392 1.52281 77.9652 1.77724 77.8477 2.05802C77.7302 2.3388 77.6718 2.64012 77.676 2.94375C77.69 3.54878 77.944 4.12439 78.3836 4.54743C78.8233 4.97046 79.4137 5.20732 80.0285 5.20732C80.6433 5.20732 81.2336 4.97046 81.6733 4.54743C82.1129 4.12439 82.367 3.54878 82.381 2.94375C82.3864 2.64029 82.329 2.33893 82.2124 2.05798C82.0957 1.77704 81.9222 1.52239 81.7025 1.30953C81.4827 1.09668 81.2212 0.930058 80.934 0.819816C80.6467 0.709574 80.3397 0.658013 80.0315 0.668271ZM80.0315 4.73874C79.7911 4.74464 79.5519 4.70215 79.3287 4.61389C79.1055 4.52563 78.903 4.39345 78.7335 4.22545C78.564 4.05744 78.4311 3.85714 78.343 3.63683C78.2549 3.41651 78.2134 3.1808 78.2211 2.94415C78.2211 2.47308 78.4112 2.0213 78.7495 1.6882C79.0879 1.3551 79.5469 1.16797 80.0254 1.16797C80.504 1.16797 80.9629 1.3551 81.3013 1.6882C81.6397 2.0213 81.8298 2.47308 81.8298 2.94415C81.8389 3.18014 81.7987 3.41546 81.7119 3.63561C81.6251 3.85576 81.4933 4.05608 81.3249 4.22421C81.1564 4.39234 80.9547 4.52473 80.7323 4.61322C80.5099 4.70171 80.2714 4.74443 80.0315 4.73874Z"
+                                            fill="currentColor"
+                                        ></path>
+                                        <path
+                                            d="M80.9777 2.48582C80.9777 2.07541 80.6792 1.84277 80.0979 1.84277H79.2344V3.874H79.7745V3.13447H80.0011L80.4127 3.874H81.0558L80.5453 3.04918C80.6705 3.01542 80.7807 2.94186 80.8589 2.83995C80.9372 2.73805 80.9789 2.61353 80.9777 2.48582ZM80.0979 2.73927H79.7725V2.26319H80.1121C80.2923 2.26319 80.4107 2.34928 80.4107 2.49623C80.4119 2.6684 80.2834 2.73927 80.0979 2.73927Z"
+                                            fill="currentColor"
+                                        ></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_631_15410">
+                                            <rect
+                                                width="81.7581"
+                                                height="26.6667"
+                                                fill="currentColor"
+                                                transform="translate(0.621094 0.666992)"
+                                            ></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="icon">
+                                <picture class="img-wrap">
+                                    <img
+                                        src="./assets/images/content/footer-icon.svg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="footer-wrap">
+                            <div class="footer-menu">
+                                <span class="title">eat</span>
+                                <ul class="footer-list">
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            Menu
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            Restaurants
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-menu">
+                                <span class="title">eat</span>
+                                <ul class="footer-list">
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            BAVET Kiosk
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            BAVET Kiosk
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            BAVET Kiosk
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            BAVET Kiosk
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            BAVET Kiosk
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            BAVET Kiosk
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-menu">
+                                <span class="title">info</span>
+                                <ul class="footer-list">
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            Contact us
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            Contact us
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            Contact us
+                                        </a>
+                                    </li>
+                                    <li class="footer-item">
+                                        <a href="" class="link-footer">
+                                            Restaurants
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="follow">
+                                    <span class="title">follow</span>
+                                    <div class="sns-icon">
+                                        <a href="" class="link-sns">
+                                            <picture class="img-wrap">
+                                                <img
+                                                    src="./assets/images/content/sns1.svg"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </a>
+                                        <a href="" class="link-sns">
+                                            <picture class="img-wrap">
+                                                <img
+                                                    src="./assets/images/content/sns2.svg"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </a>
+                                        <a href="" class="link-sns">
+                                            <picture class="img-wrap">
+                                                <img
+                                                    src="./assets/images/content/sns3.svg"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </a>
+                                        <a href="" class="link-sns">
+                                            <picture class="img-wrap">
+                                                <img
+                                                    src="./assets/images/content/sns4.svg"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="laguage">
+                                    <span class="title">laguage</span>
+
+                                    <div class="laguage-icon">
+                                        <a href="" class="link-laguage">
+                                            <span>nl</span>
+                                        </a>
+                                        <a href="" class="link-laguage">
+                                            <span>en</span>
+                                        </a>
+                                        <a href="" class="link-laguage">
+                                            <span>fr</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom">
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="link-footer">
+                                    Bavet © 2023
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="link-footer">
+                                    Privacy policy
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="link-footer">
+                                    General Terms & Conditions
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="link-footer">
+                                    Cookie Policy
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="link-footer"> Disclaimer </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="link-footer">
+                                    Customer Service
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
